@@ -1,6 +1,10 @@
 # imports
+import urllib.request    
 import datetime
 from datetime import date, timedelta
+
+# retrieve log file
+urllib.request.urlretrieve("https://s3.amazonaws.com/tcmg476/http_access_log", "http_access_log.txt")
 
 #reads file
 with open(r'http_access_log.txt','r') as request_log:
